@@ -22,3 +22,38 @@ python3 manage.py runserver
 ```
 python3 manage.py launch_queue_listener
 ```
+
+
+## Kafka commands
+
+Create a topic 
+```
+kafka-topics.sh --create --partitions 3 --bootstrap-server localhost:9093 --topic <topic_name>
+```
+
+List all your topics
+```
+kafka-topics.sh --bootstrap-server=localhost:9093 --list
+```
+
+Check a particular topic details
+```
+kafka-topics.sh --bootstrap-server=localhost:9093 --describe --topic <topic_name>
+```
+
+Delete a topic
+```
+kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic <topic_name>
+```
+
+
+List groups
+```
+kafka-consumer-groups.sh --list --bootstrap-server localhost:9093
+```
+
+
+Check details of a particular group
+```
+kafka-consumer-groups.sh --describe --group <group_name> --members --bootstrap-server localhost:9093
+```

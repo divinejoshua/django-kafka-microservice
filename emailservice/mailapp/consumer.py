@@ -10,7 +10,6 @@ running=True
 conf = {'bootstrap.servers': "localhost:9093",
         'auto.offset.reset': 'smallest',
         'group.id': "user_group"}
-#Topic
 topic='topic_user_created'
 
 

@@ -16,6 +16,7 @@ topic='topic_user_created'
 class UserCreatedListener(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
+        # Create consumer
         self.consumer = Consumer(conf)
    
         
@@ -30,7 +31,6 @@ class UserCreatedListener(threading.Thread):
 
                 if msg.error():
                     if msg.error().code() == KafkaError._PARTITION_EOF:
-                        print("Error")
                     # End of partition event
                         sys.stderr.write('%% %s [%d] reached end at offset %d\n' %
                                      (msg.topic(), msg.partition(), msg.offset()))
