@@ -1,4 +1,4 @@
-## Django RabbitMQ Microservices
+## Django Kafka Microservices
 This is a django project that has 3 micro serivces all communicationg together with Kafka. This project is inspired by https://github.com/mansha99/django-kafka-microservice/tree/master and a detailed blog https://medium.com/@mansha99/microservices-using-django-and-kafka-3776e8592ef3
 
 ## Project setup
