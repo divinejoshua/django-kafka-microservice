@@ -6,7 +6,7 @@ topic='topic_user_created'
 
 class ProducerUserCreated:
     def __init__(self) -> None:        
-        conf = {'bootstrap.servers': "localhost:9092",'client.id': socket.gethostname()}
+        conf = {'bootstrap.servers': "localhost:9093",'client.id': socket.gethostname()}
         self.producer = Producer(conf)
 
     # This method will be called inside view for sending Kafka message
