@@ -37,7 +37,10 @@ class UserCreatedListener(threading.Thread):
                     raise KafkaException(msg.error())
                 else:
                     message = json.loads(msg.value().decode('utf-8'))
-                    print(message)
+                    userDetails = json.loads(message)
+
+                    #In Real world, write some logging function here
+                    print("Log : "+userDetails["email"]+ " user registered")
         finally:
         # Close down consumer to commit final offsets.
             self.consumer.close()
