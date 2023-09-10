@@ -42,8 +42,9 @@ class UserCreatedListener(threading.Thread):
                     #Handle Message
                     print('---------> Got message Sending email.....')
                     message = json.loads(msg.value().decode('utf-8'))
+                    userDetails = json.loads(message)
                     #In Real world, write email sending logic here
-                    print(message)
+                    print("Email sent to : "+userDetails['email'])
         finally:
         # Close down consumer to commit final offsets.
             self.consumer.close()
