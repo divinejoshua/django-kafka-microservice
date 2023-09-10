@@ -11,6 +11,8 @@ pip3 install requirements.txt
 docker-compose up
 ```
 
+Port may be :9093 or :9092
+
 ## Start the userservice application
 ```
 python3 manage.py runserver
