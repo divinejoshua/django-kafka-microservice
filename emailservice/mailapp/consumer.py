@@ -40,7 +40,6 @@ class UserCreatedListener(threading.Thread):
                     raise KafkaException(msg.error())
                 else:
                     #Handle Message
-                    print('---------> Got message Sending email.....')
                     message = json.loads(msg.value().decode('utf-8'))
                     userDetails = json.loads(message)
                     #In Real world, write email sending logic here
