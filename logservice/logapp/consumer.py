@@ -8,8 +8,9 @@ from confluent_kafka import KafkaException
 
 running=True
 conf = {'bootstrap.servers': "localhost:9093",
-        'auto.offset.reset': 'smallest',
-        'group.id': "user_group"}
+        # 'auto.offset.reset': 'smallest',
+        'group.id': "user_group_log"
+        }
 topic='topic_user_created'
 
 
